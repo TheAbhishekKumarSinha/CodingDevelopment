@@ -1,12 +1,12 @@
 package code.java.practice.javaexamples;
 
 /**
- * @author abhsinha
+ * @author Abhishek Kumar Sinha
  *
  */
 interface ExceptionInInterfaces {
 
-    public static void function() {
+    public static void Functions() {
         int a = 0;
         System.out.println(a);
     }
@@ -14,7 +14,7 @@ interface ExceptionInInterfaces {
     /**
      * Method Description:
      */
-    public void functionsss();
+    public void functionsss() throws RuntimeException;
 
 }
 
@@ -28,9 +28,20 @@ public class ExceptionInInterface implements ExceptionInInterfaces {
      * 
      * @see code.java.practice.javaexamples.ExceptionInInterfaces#functions()
      */
-    @Override
-    public void functionsss() throws RuntimeException {
-        throw new RuntimeException();
 
+    // public void functionsss() throws IOException { Compile Time exception
+    // if the exception is not
+    // declared in parent
+    // class then child class can only declare unchecked exception
+
+    // public void functionsss() throws Exception { Compile Time exception
+    // if the runtime exception is
+    // declared in parent
+    // class then child class can only declare child exception or same exception or no exception
+
+    @Override
+    public void functionsss() throws ArrayIndexOutOfBoundsException {
+        throw new RuntimeException();
     }
+
 }

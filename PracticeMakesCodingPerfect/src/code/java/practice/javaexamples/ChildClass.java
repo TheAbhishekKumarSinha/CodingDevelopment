@@ -12,6 +12,14 @@ class ParentClass {
         System.out.println("Parent Class Move");
         return "";
     }
+
+    final void parentWatch() {
+        System.out.println("Parent Watch");
+    }
+
+    static void LetsPlay() {
+        System.out.println("Parent Lets Play");
+    }
 }
 
 public class ChildClass extends ParentClass {
@@ -23,23 +31,23 @@ public class ChildClass extends ParentClass {
     int a = 1;
     int b = 2;
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see code.java.practice.javaexamples.ParentClass#move()
+     */
     @Override
     Integer move() {
         System.out.println("Child Class Move");
         return 0;
     }
 
-    public static void main(String[] args) {
-        ParentClass p = new ChildClass();
-        System.out.println(p.a);
-        System.out.println(p.b);
-        try {
-            System.out.println(p.move());
-        }
-        catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+    void childWatche() {
+        System.out.println("Child Watche");
+    }
+
+    static void LetsPlay() {
+        System.out.println("Lets Play");
     }
 }
 
