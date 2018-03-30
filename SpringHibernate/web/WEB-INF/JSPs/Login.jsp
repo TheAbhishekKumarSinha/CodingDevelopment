@@ -8,48 +8,7 @@
 <title>Login</title>
 </head>
 <body>
-	<%!int day = 3;%>
-	<%
-		if (day == 1 | day == 7) {
-	%>
-	<p>Today is weekend</p>
-	<%
-		} else {
-	%>
-	<p>Today is not weekend</p>
-	<%
-		}
-	%>
-	<%
-		switch (day) {
-		case 0:
-			out.println("It\'s Sunday.");
-			break;
-		case 1:
-			out.println("It\'s Monday.");
-			break;
-		case 2:
-			out.println("It\'s Tuesday.");
-			break;
-		case 3:
-			out.println("It\'s Wednesday.");
-			break;
-		case 4:
-			out.println("It\'s Thursday.");
-			break;
-		case 5:
-			out.println("It\'s Friday.");
-			break;
-		default:
-			out.println("It's Saturday.");
-		}
-	%>
 	
-	<%for ( int fontSize = 1; fontSize <= 3; fontSize++){ %>
-   <font color="green" size="<%= fontSize %>"><br/>
-    JSP Tutorial
-   </font><br />
-<%}%>
 	<form:form method="post" commandName="user1"
 		action="http://localhost:8181/SpringHibernate/">
 		<table>
