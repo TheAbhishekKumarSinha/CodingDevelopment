@@ -10,7 +10,7 @@
 <body>
 	
 	<form:form method="post" commandName="user1"
-		action="http://localhost:8181/SpringHibernate/">
+		action="http://localhost:8080/SpringHibernate/">
 		<table>
 			<tr>
 				<td><form:label path="username">User Name</form:label></td>
