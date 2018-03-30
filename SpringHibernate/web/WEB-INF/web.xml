@@ -20,7 +20,22 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/HibernateSpring-servlet.xml</param-value>
 	</context-param>
+	 <servlet>
+		<servlet-name>SpringServices</servlet-name>
+		<servlet-class>org.springframework.ws.transport.http.MessageDispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>transformWsdlLocations</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SpringServices</servlet-name>
+		<url-pattern>/Services/*</url-pattern>
+	</servlet-mapping> 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+
+
+
 </web-app>

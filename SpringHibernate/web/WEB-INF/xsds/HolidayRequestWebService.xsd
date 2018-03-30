@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:holins="http://www.example.org/HolidayRequestWebService"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.example.org/HolidayRequestWebService"
+	elementFormDefault="qualified">
+
+	<xs:complexType name="HolidayRequest">
+		<xs:sequence>
+			<xs:element name="EmployeeDetails" type="holins:EmployeeDetails"/>
+			<xs:element name="HolidayDetails" type="holins:HolidayDetails"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="EmployeeDetails">
+		<xs:sequence>
+			<xs:element name="empFirstName" type="xs:string" />
+			<xs:element name="empLastName" type="xs:string" />
+			<xs:element name="empCode" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="HolidayDetails">
+		<xs:sequence>
+			<xs:element name="startDate" type="xs:date" />
+			<xs:element name="endDate" type="xs:date" />
+		</xs:sequence>
+	</xs:complexType>
+</schema>
