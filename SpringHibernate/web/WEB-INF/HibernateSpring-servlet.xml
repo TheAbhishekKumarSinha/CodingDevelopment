@@ -25,12 +25,20 @@
 	<!-- <mvc:interceptors> <bean class="org.springhibernate.interceptors.LoginInterceptors" 
 		/> </mvc:interceptors> -->
 
-	<bean name="dataSource"
+	<!-- <bean name="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.ibm.db2.jcc.DB2Driver" />
 		<property name="url" value="jdbc:db2://localhost:50000/FBE53MT" />
 		<property name="username" value="bfdbusr" />
 		<property name="password" value="Misys123$" />
+	</bean> -->
+	
+	<bean name="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="username" value="system" />
+		<property name="password" value="oracle" />
 	</bean>
 
 	<bean id="messageSource"
