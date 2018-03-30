@@ -51,7 +51,7 @@
    </font><br />
 <%}%>
 	<form:form method="post" commandName="user1"
-		action="http://localhost:8999/SpringHibernate/login">
+		action="http://localhost:8181/SpringHibernate/">
 		<table>
 			<tr>
 				<td><form:label path="username">User Name</form:label></td>

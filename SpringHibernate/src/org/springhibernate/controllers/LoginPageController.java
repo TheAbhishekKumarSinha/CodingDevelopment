@@ -1,19 +1,13 @@
 package org.springhibernate.controllers;
 
-import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springhibernate.controllers.helper.HelperClass;
-import org.springhibernate.jdbc.pojo.Users;
 import org.springhibernate.pojo.User;
 import org.springhibernate.spring.jdbc.LoginJdbcDataAccess;
 import org.springhibernate.validators.LoginValidator;
@@ -39,13 +33,12 @@ public class LoginPageController {
         this.validator = validator;
     }
 
-    /*
-     * @RequestMapping(value="fogin",method=RequestMethod.GET) public String
-     * loginPage(@ModelAttribute("user1")User user, BindingResult result,HttpServletRequest
-     * request){ return "Login"; }
-     */
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String loginPage(@ModelAttribute("user1") User user, BindingResult result, HttpServletRequest request) {
+        return "Login";
+    }
 
-    @RequestMapping(value = "login", method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public String loginCredentials(@ModelAttribute("user1") User user1, BindingResult result, HttpServletRequest request) {
         // User users= new User();
         System.out.println("Username :" + user1.getUsername() + " " + "Password" + user1.getPassword());
@@ -53,15 +46,11 @@ public class LoginPageController {
         if (result.hasErrors()) {
             return "Login";
         }
-        List<Users> users = null;
-        try {
-            users = HelperClass.userList();
-        }
-        catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-        }
+        /*
+         * List<Users> users = null; try { users = HelperClass.userList(); } catch (IOException e) {
+         * // TODO Auto-generated catch block e.printStackTrace();
+         * TransactionAspectSupport.currentTransactionStatus().setRollbackOnly(); }
+         */
         /*
          * loginJdbcDataAccess.batchUpdate(users); HttpSession session = request.getSession();
          */

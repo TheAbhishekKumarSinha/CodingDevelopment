@@ -13,7 +13,7 @@ public class HelperClass {
 	static List<Users> users =new ArrayList<Users>();
 	public static List<Users> userList() throws IOException{
 		
-		File file= new File("C:/Users/$iLeNtKiLlEr/Documents/workspace/SpringHibernate/FilesIO/abhi.csv");
+		File file= new File("./FilesIO/abhi.csv");
 		FileReader reader= new FileReader(file);
 		String thisLine="";
 		BufferedReader BufReader = new BufferedReader(reader); 
