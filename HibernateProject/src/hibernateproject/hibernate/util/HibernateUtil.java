@@ -29,8 +29,10 @@ public class HibernateUtil {
         try {
             // Create the SessionFactory from hibernate.cfg.xml
             Configuration configuration = new Configuration();
-            String hibernatePropsFilePath = "C:\\Users\\abhsinha\\eclipse-workspace\\HibernateProject\\src\\hibernateproject\\hibernate\\util\\hibernate-annotation.cfg.xml";
-            configuration.configure(new File(hibernatePropsFilePath));
+
+            String hibernatePropsFilePath = "src/hibernateproject/hibernate/util/hibernate-annotation.cfg.xml";
+            File file = new File(hibernatePropsFilePath);
+            configuration.configure(file);
 
             configuration.addAnnotatedClass(Employee.class);
             configuration.addAnnotatedClass(Customer.class);
