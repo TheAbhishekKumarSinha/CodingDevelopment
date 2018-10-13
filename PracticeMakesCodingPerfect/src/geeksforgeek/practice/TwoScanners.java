@@ -1,4 +1,4 @@
-package java.geeksforgeek.practice;
+package geeksforgeek.practice;
 /*package whatever //do not write package name here */
 
 import java.util.*;

@@ -1,4 +1,4 @@
-package java.geeksforgeek.practice;
+package geeksforgeek.practice;
 public class InstanceCounter {
 
    private static int numInstances = 0;

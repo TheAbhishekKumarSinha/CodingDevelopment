@@ -8,7 +8,7 @@
 <title>Login</title>
 </head>
 <body>
-	<%!int day = 3;%>
+	<%-- <%!int day = 3;%>
 	<%
 		if (day == 1 | day == 7) {
 	%>
@@ -49,9 +49,9 @@
    <font color="green" size="<%= fontSize %>"><br/>
     JSP Tutorial
    </font><br />
-<%}%>
+<%}%> --%>
 	<form:form method="post" commandName="user1"
-		action="http://localhost:8080/SpringHibernate/">
+		action="http://localhost:8080/SpringHibernate/login">
 		<table>
 			<tr>
 				<td><form:label path="username">User Name</form:label></td>

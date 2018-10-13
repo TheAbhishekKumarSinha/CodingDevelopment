@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns="http://www.w3.org/2001/XMLSchema" 
-	xmlns:holins="http://www.example.org/HolidayRequestWebService"
-	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-	targetNamespace="http://www.example.org/HolidayRequestWebService"
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:holins="http://www.example.org/HolidayRequestWebService"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/HolidayRequestWebService"
 	elementFormDefault="qualified">
 
 	<xs:complexType name="HolidayRequest">
 		<xs:sequence>
-			<xs:element name="EmployeeDetails" type="holins:EmployeeDetails"/>
-			<xs:element name="HolidayDetails" type="holins:HolidayDetails"/>
+			<xs:element name="EmployeeDetails" type="holins:EmployeeDetails" />
+			<xs:element name="HolidayDetails" type="holins:HolidayDetails" />
 		</xs:sequence>
 	</xs:complexType>
 
@@ -24,6 +22,12 @@
 		<xs:sequence>
 			<xs:element name="startDate" type="xs:date" />
 			<xs:element name="endDate" type="xs:date" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="HolidayResponse">
+		<xs:sequence>
+			<xs:element name="holidayApprovedStatus" type="xs:string" />
 		</xs:sequence>
 	</xs:complexType>
 </schema>
