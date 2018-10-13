@@ -61,7 +61,8 @@ public class LoginValidator implements Validator {
 
                         }
                         else {
-                            if (user1.getUserLocked().equals("1")) {
+                            if ((user1.getUserLocked() != null && !(user1.getUserLocked().equals("")))
+                                    && user1.getUserLocked().equals("1")) {
                                 error.rejectValue("username", "userlocked.maximum", "User Locked: Maximum Attempt Breached");
                                 error.rejectValue("password", "contact.admin", "Contact: Administrator");
                             }
