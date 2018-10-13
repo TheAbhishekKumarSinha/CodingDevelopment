@@ -21,7 +21,7 @@ public class InheritanceClass {
      */
     private static void CallExceptionInInterfce() {
         ExceptionInInterfaces exce = new ExceptionInInterface();
-        exce.functionsss();
+        /* exce.functionsss(); */
 
     }
 
