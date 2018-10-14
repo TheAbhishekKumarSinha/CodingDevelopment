@@ -1,18 +1,18 @@
-package org.springhibernate.webservices.services;
+package org.springhibernate.webservices.soap.services;
 
 import java.util.Date;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
-import org.springhibernate.webservices.interfaces.IHolidayRequestServices;
+import org.springhibernate.webservices.soap.interfaces.IHolidayRequestServices;
 
 /**
  * @author Abhishek Kumar Sinha
  *
  */
 
-@WebService(endpointInterface = "org.springhibernate.webservices.interfaces.IHolidayRequestServices", serviceName = "BookHolidays")
+@WebService(endpointInterface = "org.springhibernate.webservices.soap.interfaces.IHolidayRequestServices", serviceName = "BookHolidays")
 public class HolidayRequest implements IHolidayRequestServices {
 
     @Override

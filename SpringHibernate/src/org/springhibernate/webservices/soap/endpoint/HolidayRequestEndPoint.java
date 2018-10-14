@@ -1,4 +1,4 @@
-package org.springhibernate.webservices.endpoint;
+package org.springhibernate.webservices.soap.endpoint;
 
 public class HolidayRequestEndPoint {
     /*

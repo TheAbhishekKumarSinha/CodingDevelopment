@@ -1,5 +1,11 @@
 package org.springhibernate.jdbc.pojo;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement
+@XmlType
 public class Users {
 
     private String userid;
@@ -9,6 +15,11 @@ public class Users {
     private String userLocked;
     private String userLockedReason;
 
+    public Users() {
+
+    }
+
+    @XmlElement(name = "User_Name")
     public String getUsername() {
         return username;
     }
@@ -17,6 +28,7 @@ public class Users {
         this.username = username;
     }
 
+    @XmlElement(name = "User_Password")
     public String getPassword() {
         return password;
     }
@@ -25,6 +37,7 @@ public class Users {
         this.password = password;
     }
 
+    @XmlElement(name = "User_Code")
     public String getUserid() {
         return userid;
     }
@@ -33,6 +46,7 @@ public class Users {
         this.userid = userid;
     }
 
+    @XmlElement(name = "UnSucessful_Attempts")
     public int getUnsuccessfulLoginAttempts() {
         return unsuccessfulLoginAttempts;
     }
@@ -41,6 +55,7 @@ public class Users {
         this.unsuccessfulLoginAttempts = unsuccessfulLoginAttempts;
     }
 
+    @XmlElement(name = "User_Locked")
     public String getUserLocked() {
         return userLocked;
     }
@@ -49,6 +64,7 @@ public class Users {
         this.userLocked = userLocked;
     }
 
+    @XmlElement(name = "User_Locked_Reason")
     public String getUserLockedReason() {
         return userLockedReason;
     }

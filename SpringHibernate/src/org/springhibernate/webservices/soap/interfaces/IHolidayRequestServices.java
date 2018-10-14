@@ -1,4 +1,4 @@
-package org.springhibernate.webservices.interfaces;
+package org.springhibernate.webservices.soap.interfaces;
 
 import java.util.Date;
 
