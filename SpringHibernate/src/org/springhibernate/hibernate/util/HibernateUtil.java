@@ -1,4 +1,4 @@
-package org.springhibernate.webservices.endpoint;
+package org.springhibernate.hibernate.util;
 
 /**
  * @author Abhishek Kumar Sinha
